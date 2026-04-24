@@ -1,1 +1,0 @@
-# Sit Trader Platform
