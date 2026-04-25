@@ -1,0 +1,18 @@
+[build]
+  command = "node scripts/fix-site.js"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[redirects]]
+  from = "/tools"
+  to = "/tools/"
+  status = 301
